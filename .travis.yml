@@ -1,15 +1,15 @@
+---
 language: java
 jdk:
-  - oraclejdk7
-
+- oraclejdk7
 env:
-  - TERM=dumb
-
+- TERM=dumb
 install:
-  - ./gradlew --version
-  - mvn --version
-
+- "./gradlew --version"
+- mvn --version
 script:
-  - ./gradlew --continue
-  - mvn -f bnd-maven-plugin-parent/bnd-maven-plugin-dependencies -Dmaven.repo.local=bnd-maven-plugin-parent/target/m2 --batch-mode --quiet initialize
-  - mvn -f bnd-maven-plugin-parent -Dmaven.repo.local=bnd-maven-plugin-parent/target/m2 --batch-mode --quiet install
+- "./gradlew --continue"
+- mvn -f bnd-maven-plugin-parent/bnd-maven-plugin-dependencies -Dmaven.repo.local=bnd-maven-plugin-parent/target/m2
+  --batch-mode --quiet initialize
+- mvn -f bnd-maven-plugin-parent -Dmaven.repo.local=bnd-maven-plugin-parent/target/m2
+  --batch-mode --quiet install
