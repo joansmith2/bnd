@@ -1,10 +1,8 @@
+---
 language: java
 jdk:
-  - oraclejdk7
-
+- oraclejdk7
 env:
-  - TERM=dumb
-
-install: ./gradlew --version
-
-script: ./gradlew --continue
+- TERM=dumb
+install: "./gradlew --version"
+script: "./gradlew --continue"
